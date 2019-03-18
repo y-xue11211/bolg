@@ -1,0 +1,49 @@
+
+{% extends 'back/base_main.html' %}
+
+{% block title %}
+    修改密码
+{% endblock %}
+
+
+{% block content %}
+<section class="rt_wrap">
+
+    <div class="rt_content">
+        <div class="page_title">
+            <h2 class="fl">修改密码</h2>
+            <a class="fr top_rt_btn" href="/goods/goods_list/">返回首页</a>
+        </div>
+        <form action="" method="post" enctype="multipart/form-data">
+            {{ error }}
+            <input type='hidden' name='csrfmiddlewaretoken' value='QuPi2QUuEhlKchGijsQULGJKUZO6bOJacZPtDzGnIfWv89lLhtnbVM2EVRxtAXCJ' />
+            <section>
+                <ul class="ulColumn2">
+                    <li>
+                        <span class="item_name" style="width:120px;">原密码：</span>
+                        <label style="display:inline-block;padding:15px;background:#f8f8f8;">
+                            <input type="password" placeholder="原密码" name="password" class="login_txtbx"/>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="item_name" style="width:120px;">新密码：</span>
+                        <label style="display:inline-block;padding:15px;background:#f8f8f8;">
+                            <input type="password" placeholder="新密码" name="password1" class="login_txtbx"/>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="item_name" style="width:120px;">确认密码：</span>
+                        <label style="display:inline-block;padding:15px;background:#f8f8f8;">
+                            <input type="password" placeholder="确认密码" name="password2" class="login_txtbx"/>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="item_name" style="width:120px;"></span>
+                        <input type="submit" class="link_btn"/>
+                    </li>
+                </ul>
+            </section>
+        </form>
+    </div>
+</section>
+{% endblock %}

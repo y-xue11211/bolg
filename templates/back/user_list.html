@@ -1,0 +1,38 @@
+
+{% extends 'back/base_main.html' %}
+
+{% block title %}
+    用户信息
+{% endblock %}
+
+{% block content %}
+<section class="rt_wrap content mCustomScrollbar">
+   <div class="rt_content">
+        <div class="page_title">
+            <h2 class="fl">用户列表</h2>
+            <a href="user_detail.html" class="fr top_rt_btn add_icon">添加新会员</a>
+        </div>
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>用户账号</th>
+                <th>是否删除</th>
+                <th>创建时间</th>
+                <th>删除账号</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td class="center" style="text-align:center;">{{ user.id }}</td>
+                <td style="text-align:center;">{{ user.username }}</td>
+                <td style="text-align:center;">{{ user.is_delete }}</td>
+                <td style="text-align:center;">{{ user.create_time }}</td>
+                <td class="" style="text-align:center;">
+                     <a href="{{ url_for('back.del_user', id=user.id) }}" title="删除" class="link_icon">&#100;</a>
+                     <a href="{{ url_for('back.change_pwd', id=user.id) }}" title="修改密码" class="link_icon">&#101;</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+   </div>
+</section>
+{% endblock %}

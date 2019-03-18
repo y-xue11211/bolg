@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>薛毅个人博客 </title>
+<link href="/static/web/css/base.css" rel="stylesheet">
+<link href="/static/web/css/about.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="/static/web/js/modernizr.js"></script>
+<![endif]-->
+<script src="/static/web/js/scrollReveal.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo" data-scroll-reveal="enter right over 1s"><a href="/"><img src="/static/web/images/logo.png"></a></div>
+  <nav class="topnav" data-scroll-reveal="enter bottom over 1s after 1s">
+    <a href="{{ url_for('web.index') }}"><span>首页</span><span class="en">Home</span></a>
+    <a href="{{ url_for('web.about') }}"><span>关于我</span><span class="en">About</span></a>
+    <a href="{{ url_for('web.learning') }}"><span>学无止境</span><span class="en">Learn</span></a>
+    <a href="{{ url_for('web.message') }}"><span>留言</span><span class="en">Saying</span></a></nav>
+</header>
+<article>
+  <div class="container">
+    <div class="banner">
+      <p data-scroll-reveal="enter top over 2s">我们不停的翻弄着回忆，却再也找不回那时的自己</p>
+      <p data-scroll-reveal="enter left over 2s after 1s">人生，是一场盛大的遇见。若你懂得，就请珍惜。</p>
+      <p data-scroll-reveal="enter bottom over 2s after 2s">无论下多久的雨，最后都会有彩虹；无论你多么悲伤，要相信幸福在前方等候.</p>
+    </div>
+    <div class="memorial_day">
+      <div class="time_axis"></div>
+      <ul>
+        <li class="n1"><a href="/">接触编程</a>
+          <div class="dateview">2013</div>
+        </li>
+        <li class="n2"><a href="/">了解Python</a>
+          <div class="dateview">2018</div>
+        </li>
+        <li class="n3"><a href="/">完成第一个博客后台</a>
+          <div class="dateview">2019</div>
+        </li>
+        <!--<li class="n4"><a href="/">制作第一个html5模板</a>-->
+          <!--<div class="dateview">2013-08-08</div>-->
+        <!--</li>-->
+        <!--<li class="n5"><a href="/">模板更换为时间轴</a>-->
+          <!--<div class="dateview">2017-09-08</div>-->
+        <!--</li>-->
+      </ul>
+    </div>
+    <div class="about left">
+  <h2>Just about Python</h2>
+    <ul> 
+     <p>Python是一种计算机程序设计语言。是一种动态的、面向对象的脚本语言，最初被设计用于编写自动化脚本(shell)，随着版本的不断更新和语言新功能的添加，越来越多被用于独立的、大型项目的开发。</p>
+<p>Python的作者，Guido von Rossum，确实是荷兰人。1982年，Guido从阿姆斯特丹大学(University of Amsterdam)获得了数学和计算机硕士学位。然而，尽管他算得上是一位数学家，但他更加享受计算机带来的乐趣。用他的话说，尽管拥有数学和计算机双料资质，他总趋向于做计算机相关的工作，并热衷于做任何和编程相关的活儿。</p>
+<p>1991年，第一个Python编译器(同时也是解释器)诞生。它是用C语言实现的，并能够调用C库(.so文件)。从一出生，Python已经具有了：类(class)，函数(function)，异常处理(exception)，包括表(list)和词典(dictionary)在内的核心数据类型，以及模块(module)为基础的拓展系统。</p>
+<p>
+Python崇尚优美、清晰、简单，是一个优秀并广泛使用的语言。在Python的开发过程中，社区起到了重要的作用。Guido自认为自己不是全能型的程序员，所以他只负责制订框架。如果问题太复杂，他会选择绕过去，也就是cut the corner。这些问题最终由社区中的其他人解决。社区中的人才是异常丰富的，就连创建网站，筹集基金这样与开发稍远的事情，也有人乐意于处理。如今的项目开发越来越复杂，越来越庞大，合作以及开放的心态成为项目最终成功的关键。
+</p>
+    </ul>
+    <h2>About my</h2>
+    <p>薛毅、男、一个才接触编程的小菜鸟 </p>
+    <p>薛毅个人博客<a href="https://y-xue11211.github.io/" target="_blank" class="blog_link">Python相关学习资料</a></p>
+
+
+</div>
+  </div>
+  </aside>
+</article>
+<script>
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+		})();
+	};
+</script>
+</body>
+</html>
